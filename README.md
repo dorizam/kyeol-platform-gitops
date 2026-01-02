@@ -24,7 +24,7 @@ kyeol-platform-gitops/
 ### 1. MGMT 클러스터에 ArgoCD 설치
 
 ```bash
-kubectl config use-context arn:aws:eks:ap-southeast-2:ACCOUNT:cluster/min-kyeol-mgmt-eks
+kubectl config use-context arn:aws:eks:ap-northeast-3:ACCOUNT:cluster/sol-kyeol-mgmt-eks
 kubectl apply -k argocd/bootstrap/
 ```
 
@@ -37,7 +37,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ### 3. DEV 클러스터에 Addons 설치
 
 ```bash
-kubectl config use-context arn:aws:eks:ap-southeast-2:ACCOUNT:cluster/min-kyeol-dev-eks
+kubectl config use-context arn:aws:eks:ap-northeast-3:ACCOUNT:cluster/sol-kyeol-dev-eks
 kubectl apply -k clusters/dev/addons/aws-load-balancer-controller/
 kubectl apply -k clusters/dev/addons/external-dns/
 kubectl apply -k clusters/dev/addons/metrics-server/

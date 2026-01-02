@@ -1,14 +1,14 @@
 # AWS Load Balancer Controller: Helm Values (DEV)
 # IRSA 역할 ARN은 Terraform output에서 가져옵니다.
 
-clusterName: min-kyeol-dev-eks
-region: ap-southeast-2
+clusterName: sol-kyeol-dev-eks
+region: ap-northeast-3
 
 serviceAccount:
   create: true
   name: aws-load-balancer-controller
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::827913617839:role/min-kyeol-dev-alb-controller-role"  # TODO: 실제 ARN으로 교체
+    eks.amazonaws.com/role-arn: "arn:aws:iam::827913617839:role/sol-kyeol-dev-alb-controller-role"  # TODO: 실제 ARN으로 교체
 
 # 리소스 설정 (DEV는 최소)
 resources:
